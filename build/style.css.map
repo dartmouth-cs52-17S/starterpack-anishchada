@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/style.scss"],"names":[],"mappings":"AAAA;EACE,kCAAiC;EACjC,oBAA8B,EAC/B","file":"style.css","sourcesContent":["body {\n  font-family: \"Roboto\", sans-serif;\n  background: darken(white, 0.2);\n}\n\n\n\n// WEBPACK FOOTER //\n// ./src/style.scss"],"sourceRoot":""}
