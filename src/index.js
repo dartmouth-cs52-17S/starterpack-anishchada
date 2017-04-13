@@ -7,15 +7,15 @@
 import $ from 'jquery';
 import './style.scss';
 
-// https://www.w3schools.com/jsref/met_win_setinterval.asp
-// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_setinterval2
+// Referenced https://www.w3schools.com/jsref/met_win_setinterval.asp
+// Referenced https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_setinterval2
 
 // Maybe make t a local variable and use let, and take var myVar out because its not necessary?x
 
 let t = 0;
 function myTimer() {
   t += 1;
-  $('#main').html(`${t}`);
+  $('#main').html(`You have been here for ${t} seconds`);
 }
 // const myVar =
 setInterval(() => { myTimer(); }, 1000);
