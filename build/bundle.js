@@ -81,8 +81,8 @@ __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// https://www.w3schools.com/jsref/met_win_setinterval.asp
-// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_setinterval2
+// Referenced https://www.w3schools.com/jsref/met_win_setinterval.asp
+// Referenced https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_setinterval2
 
 // Maybe make t a local variable and use let, and take var myVar out because its not necessary?x
 
@@ -95,7 +95,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var t = 0;
 function myTimer() {
   t += 1;
-  (0, _jquery2.default)('#main').html('' + t);
+  (0, _jquery2.default)('#main').html('You have been here for ' + t + ' seconds');
 }
 // const myVar =
 setInterval(function () {
