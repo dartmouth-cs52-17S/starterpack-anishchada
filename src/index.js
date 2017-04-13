@@ -4,6 +4,8 @@
 
 // change require to es6 import style
 
+// Utilized code provided in assignment description throughout this assignment - thank you to Tim and all the TAs
+
 import $ from 'jquery';
 import './style.scss';
 
