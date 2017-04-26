@@ -1,22 +1,50 @@
-// console.log('starting up!');
-
-// const $ = require('jquery');
-
-// change require to es6 import style
-
-// Utilized code provided in assignment description throughout this assignment - thank you to Tim and all the TAs
-
-import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Switch, BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import './style.scss';
 
-// Referenced https://www.w3schools.com/jsref/met_win_setinterval.asp
-// Referenced https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_setinterval2
-// Maybe make t a local variable and use let, and take var myVar out because its not necessary?x
+const About = (props) => {
+  return <div> All there is to know about me </div>;
+};
+const Welcome = (props) => {
+  return <div>Welcome</div>;
+};
 
-let t = 0;
-function myTimer() {
-  t += 1;
-  $('#main').html(`You have been here for ${t} seconds`);
-}
-// const myVar =
-setInterval(() => { myTimer(); }, 1000);
+const Nav = (props) => {
+  return (
+    <nav>
+      <ul>
+        <li><NavLink to="/" exact>Home</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+        <li><NavLink to="/test/id1">test id1</NavLink></li>
+        <li><NavLink to="/test/id2">test id2</NavLink></li>
+      </ul>
+    </nav>
+  );
+};
+
+const Test = (props) => {
+  return <div> ID: {props.match.params.id} </div>;
+};
+
+const FallBack = (props) => {
+  return <div>URL Not Found</div>;
+};
+
+const App = (props) => {
+  return (
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Welcome} />
+          <Route path="/about" component={About} />
+          <Route exact path="/test/:id" component={Test} />
+          <Route component={FallBack} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('main'));
